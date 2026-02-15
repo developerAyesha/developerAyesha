@@ -1,15 +1,21 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,50:DA22FF,100:FF6FD8&height=220&section=header&text=developerAyesha&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=60&descSize=20" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=developerAyesha&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=60&descSize=20" />
 </p>
+
 
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&size=22\&duration=3000\&pause=1000\&color=4158D0\&center=true\&vCenter=true\&width=700\&lines=Building+Scalable+Full+Stack+Apps;AI+%26+LangChain+Integration+Specialist;ICPC+Top+10%20%7C%20LeetCode%20Top%205%25;Passionate%20Leader%20%26%20Mentor;Innovation%20Through%20Code)](https://git.io/typing-svg)
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=4158D0&center=true&vCenter=true&width=700&lines=Building+Scalable+Full+Stack+Apps;AI+Integration+Specialist;Passionate+Developer+%26+Problem+Solver;Innovation+Through+Code)](https://git.io/typing-svg)
 
 </div>
 
-<h3 align="center">Senior Software Engineer · AI Innovator · Team Lead @ <strong>Developer Tag</strong></h3>
+
+</div>
+
+<h3 align="center"> Software Engineer · Team Lead @ <strong>Developer Tag</strong></h3>
 
 <p align="center">
   <a href="https://developerAyesha-psi.vercel.app">Portfolio</a> ·
@@ -23,8 +29,7 @@
 
 ### At a glance
 
-* **3+ years** shipping scalable products (SaaS, dashboards, microservices)
-* **ICPC Asia 2023 — Top 10** · **LeetCode Top 5%**
+* **1+ years** shipping scalable products (SaaS, dashboards, microservices)
 * Lead teams building **MERN/Next.js** platforms on **AWS** with solid DevOps
 * Production **AI/RAG** with LangChain/LangGraph
 
@@ -47,8 +52,8 @@
 
 ---
 
-### Selected work
-
+<!-- ### Selected work -->
+<!-- 
 > Private client repositories are intentionally not linked. Public case‑study write‑ups will live on the portfolio. For repo access, please reach out privately.
 
 <div align="center">
@@ -60,7 +65,7 @@
 | **Event‑Driven Microservices** | Services with Kafka/NATS, SAGA/Outbox patterns         | Node.js, Docker, PostgreSQL, Kafka            | 🔒 Internal (request case study) |
 | **AI Support Bot**             | Multilingual support agent with tools & memory         | Python, FastAPI, LangChain, Redis             | 🔒 Internal (request case study) |
 
-</div>
+</div> -->
 
 ---
 
@@ -81,21 +86,21 @@
 
 ---
 
-### Leadership & practices
+<!-- ### Leadership & practices
 
 * Write architecture decisions (ADRs) and run blameless post‑mortems
 * Prefer automated quality gates: CI, coverage, lint, type‑safety
 * Design for operability: logs, traces, dashboards, SLOs
-* Communicate with RFCs and small, frequent releases
+* Communicate with RFCs and small, frequent releases -->
 
 ---
-
+<!-- 
 ### Achievements
 
 * **ICPC Asia Online Preliminary 2023 – Top 10**
 * **LeetCode Top 5%** problem solver
 * Delivered **50+ projects** for global clients
-* Awarded **Student of the Year** (Akhuwat College)
+* Awarded **Student of the Year** (Akhuwat College) -->
 
 ---
 
