@@ -11,10 +11,10 @@
 <h3 align="center">Senior Software Engineer · AI Innovator · Team Lead @ <strong>Developer Tag</strong></h3>
 
 <p align="center">
-  <a href="https://connect2abdulaziz-psi.vercel.app">Portfolio</a> ·
-  <a href="https://linkedin.com/in/connect2abdulaziz">LinkedIn</a> ·
-  <a href="https://leetcode.com/connect2abdulaziz">LeetCode</a> ·
-  <a href="mailto:connect2abdulaziz@gmail.com">Email</a>
+  <a href="https://developerAyesha-psi.vercel.app">Portfolio</a> ·
+  <a href="https://linkedin.com/in/developerAyesha">LinkedIn</a> ·
+  <a href="https://leetcode.com/developerAyesha">LeetCode</a> ·
+  <a href="mailto:developerAyesha@gmail.com">Email</a>
 </p>
 
 ---
@@ -65,8 +65,8 @@
 
 ### Impact & activity
 <p align="center">
-  <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=connect2abdulaziz&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=connect2abdulaziz&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
+  <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
 </p>
 
 <p align="center">
@@ -74,7 +74,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true&theme=tokyo-night" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=developerAyesha&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true&theme=tokyo-night" />
 </p>
 
 

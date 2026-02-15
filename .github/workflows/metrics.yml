@@ -26,7 +26,7 @@ jobs:
       - name: Generate Professional Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: connect2abdulaziz
+          USERNAME: developerAyesha
         run: |
           # Create the professional stats generation script
           cat << 'EOF' > generate-stats.js
