@@ -27,6 +27,7 @@ jobs:
       - name: Generate Languages SVG Chart
         env:
           GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
         run: |
           python3 << 'EOF'
           import os
@@ -35,10 +36,14 @@ jobs:
           import requests
           from typing import Dict, List, Tuple
 
-          # Configuration
+          # Configuration: token + username to fetch (repo owner = your overall language stack)
           TOKEN = os.environ.get("GH_TOKEN")
+          USERNAME = os.environ.get("REPO_OWNER", "").strip()
           if not TOKEN:
               print("Error: Missing GH_TOKEN environment variable")
+              sys.exit(1)
+          if not USERNAME:
+              print("Error: Missing REPO_OWNER (github.repository_owner)")
               sys.exit(1)
 
           API_ENDPOINT = "https://api.github.com/graphql"
@@ -70,29 +75,28 @@ jobs:
           }
 
           def fetch_language_data() -> Dict[str, int]:
-              """Fetch language data from all accessible repositories."""
+              """Fetch language data from repo owner's public repos (overall language stack)."""
               lang_sizes = {}
               after = None
               
               query = """
-              query($after: String) {
-                viewer {
+              query($login: String!, $after: String) {
+                user(login: $login) {
                   repositories(
-                    first: 100, 
-                    after: $after, 
-                    affiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR], 
-                    isFork: false, 
+                    first: 100,
+                    after: $after,
+                    isFork: false,
                     orderBy: {field: UPDATED_AT, direction: DESC}
                   ) {
-                    pageInfo { 
-                      hasNextPage 
-                      endCursor 
+                    pageInfo {
+                      hasNextPage
+                      endCursor
                     }
                     nodes {
                       languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
-                        edges { 
-                          size 
-                          node { name } 
+                        edges {
+                          size
+                          node { name }
                         }
                       }
                     }
@@ -104,9 +108,9 @@ jobs:
               while True:
                   try:
                       response = requests.post(
-                          API_ENDPOINT, 
-                          json={"query": query, "variables": {"after": after}}, 
-                          headers=HEADERS, 
+                          API_ENDPOINT,
+                          json={"query": query, "variables": {"login": USERNAME, "after": after}},
+                          headers=HEADERS,
                           timeout=60
                       )
                       response.raise_for_status()
@@ -115,8 +119,11 @@ jobs:
                       if "errors" in data:
                           print(f"GraphQL errors: {data['errors']}")
                           sys.exit(1)
-                          
-                      repos = data["data"]["viewer"]["repositories"]
+                      
+                      user_data = data.get("data", {}).get("user")
+                      if not user_data:
+                          break
+                      repos = user_data["repositories"]
                       
                       for repo in repos["nodes"]:
                           for edge in repo["languages"]["edges"]:
