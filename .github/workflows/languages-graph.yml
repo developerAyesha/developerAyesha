@@ -177,11 +177,13 @@ jobs:
               ROW_GAP = 4
 
               if not languages:
-                  return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="120" viewBox="0 0 {WIDTH} 120">
-  <rect width="100%" height="100%" rx="10" fill="{CARD_BG}" stroke="{CARD_BORDER}" stroke-width="1"/>
-  <text x="{PADDING}" y="45" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="{TITLE_SIZE}" font-weight="700" fill="{TITLE_COLOR}">Most Used Languages</text>
-  <text x="{PADDING}" y="75" font-family="system-ui,sans-serif" font-size="14" fill="{TEXT_COLOR}">No language data available</text>
-</svg>'''
+                  empty_parts = []
+                  empty_parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="120" viewBox="0 0 {WIDTH} 120">')
+                  empty_parts.append(f'<rect width="100%" height="100%" rx="10" fill="{CARD_BG}" stroke="{CARD_BORDER}" stroke-width="1"/>')
+                  empty_parts.append(f'<text x="{PADDING}" y="45" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="{TITLE_SIZE}" font-weight="700" fill="{TITLE_COLOR}">Most Used Languages</text>')
+                  empty_parts.append(f'<text x="{PADDING}" y="75" font-family="system-ui,sans-serif" font-size="14" fill="{TEXT_COLOR}">No language data available</text>')
+                  empty_parts.append('</svg>')
+                  return ''.join(empty_parts)
 
               # List layout: up to 2 columns
               n = len(languages)
