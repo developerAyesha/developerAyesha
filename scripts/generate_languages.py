@@ -1,6 +1,6 @@
 import os, sys, requests, math
 import matplotlib.pyplot as plt
-
+# Generate languages.svg
 TOKEN = os.environ.get("GH_TOKEN")
 if not TOKEN:
     print("Missing GH_TOKEN env var", file=sys.stderr)
