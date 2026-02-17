@@ -26,8 +26,7 @@ jobs:
 
       - name: Generate Languages SVG Chart
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-          REPO_OWNER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
           python3 << 'EOF'
           import os
@@ -36,67 +35,42 @@ jobs:
           import requests
           from typing import Dict, List, Tuple
 
-          # Configuration: token + username to fetch (repo owner = your overall language stack)
+          # Configuration
           TOKEN = os.environ.get("GH_TOKEN")
-          USERNAME = os.environ.get("REPO_OWNER", "").strip()
           if not TOKEN:
               print("Error: Missing GH_TOKEN environment variable")
-              sys.exit(1)
-          if not USERNAME:
-              print("Error: Missing REPO_OWNER (github.repository_owner)")
               sys.exit(1)
 
           API_ENDPOINT = "https://api.github.com/graphql"
           HEADERS = {"Authorization": f"Bearer {TOKEN}"}
-          IGNORED_LANGUAGES = {"Jupyter Notebook", "Dockerfile", "Makefile"}
+          IGNORED_LANGUAGES = {"HTML", "CSS", "Jupyter Notebook", "Dockerfile", "Makefile"}
           MIN_PERCENTAGE_THRESHOLD = 1.0
           MAX_LANGUAGES_DISPLAY = 8
 
-          # Colors for "Most Used Languages" card (match reference design)
-          LANGUAGE_COLORS = {
-              "JavaScript": "#F7DF1E",
-              "TypeScript": "#3178C6",
-              "HTML": "#E34F26",
-              "CSS": "#563D7C",
-              "Python": "#3776AB",
-              "Java": "#ED8B00",
-              "C++": "#00599C",
-              "C": "#A8B9CC",
-              "C#": "#239120",
-              "Go": "#00ADD8",
-              "Rust": "#CE422B",
-              "Ruby": "#CC342D",
-              "PHP": "#777BB4",
-              "Swift": "#F05138",
-              "Kotlin": "#7F52FF",
-              "Vue": "#41B883",
-              "Shell": "#89E051",
-              "Other": "#8B949E",
-          }
-
           def fetch_language_data() -> Dict[str, int]:
-              """Fetch language data from repo owner's public repos (overall language stack)."""
+              """Fetch language data from all accessible repositories."""
               lang_sizes = {}
               after = None
               
               query = """
-              query($login: String!, $after: String) {
-                user(login: $login) {
+              query($after: String) {
+                viewer {
                   repositories(
-                    first: 100,
-                    after: $after,
-                    isFork: false,
+                    first: 100, 
+                    after: $after, 
+                    affiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR], 
+                    isFork: false, 
                     orderBy: {field: UPDATED_AT, direction: DESC}
                   ) {
-                    pageInfo {
-                      hasNextPage
-                      endCursor
+                    pageInfo { 
+                      hasNextPage 
+                      endCursor 
                     }
                     nodes {
                       languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
-                        edges {
-                          size
-                          node { name }
+                        edges { 
+                          size 
+                          node { name } 
                         }
                       }
                     }
@@ -108,9 +82,9 @@ jobs:
               while True:
                   try:
                       response = requests.post(
-                          API_ENDPOINT,
-                          json={"query": query, "variables": {"login": USERNAME, "after": after}},
-                          headers=HEADERS,
+                          API_ENDPOINT, 
+                          json={"query": query, "variables": {"after": after}}, 
+                          headers=HEADERS, 
                           timeout=60
                       )
                       response.raise_for_status()
@@ -119,11 +93,8 @@ jobs:
                       if "errors" in data:
                           print(f"GraphQL errors: {data['errors']}")
                           sys.exit(1)
-                      
-                      user_data = data.get("data", {}).get("user")
-                      if not user_data:
-                          break
-                      repos = user_data["repositories"]
+                          
+                      repos = data["data"]["viewer"]["repositories"]
                       
                       for repo in repos["nodes"]:
                           for edge in repo["languages"]["edges"]:
@@ -164,74 +135,127 @@ jobs:
               """Escape HTML special characters."""
               return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
-          def get_language_color(lang: str) -> str:
-              return LANGUAGE_COLORS.get(lang, "#8B949E")
-
           def generate_svg(languages: List[Tuple[str, float]]) -> str:
-              """Generate 'Most Used Languages' card: black bg, matches stats card width (495), dynamic percentages from API."""
-              CARD_BG = "#000000"
-              CARD_BORDER = "#6B7280"
-              TITLE_COLOR = "#F44391"
-              TEXT_COLOR = "#FFFFFF"
-              WIDTH = 495
-              PADDING = 24
-              TITLE_SIZE = 18
-              BAR_HEIGHT = 14
-              BAR_Y = 52
-              LIST_ITEM_HEIGHT = 24
-              DOT_SIZE = 8
-              LIST_START_Y = 82
-              ROW_GAP = 4
-
+              """Generate SVG chart for languages."""
               if not languages:
-                  empty_parts = []
-                  empty_parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="120" viewBox="0 0 {WIDTH} 120">')
-                  empty_parts.append(f'<rect width="100%" height="100%" rx="10" fill="{CARD_BG}" stroke="{CARD_BORDER}" stroke-width="1"/>')
-                  empty_parts.append(f'<text x="{PADDING}" y="45" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="{TITLE_SIZE}" font-weight="700" fill="{TITLE_COLOR}">Most Used Languages</text>')
-                  empty_parts.append(f'<text x="{PADDING}" y="75" font-family="system-ui,sans-serif" font-size="14" fill="{TEXT_COLOR}">No language data available</text>')
-                  empty_parts.append('</svg>')
-                  return ''.join(empty_parts)
-
-              # List layout: up to 2 columns
-              n = len(languages)
-              col2_start = (n + 1) // 2
-              list_height = (max(col2_start, n - col2_start) * (LIST_ITEM_HEIGHT + ROW_GAP)) + PADDING
-              HEIGHT = int(LIST_START_Y + list_height)
-
-              parts = []
-              parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">')
-              parts.append(f'<rect width="100%" height="100%" rx="10" fill="{CARD_BG}" stroke="{CARD_BORDER}" stroke-width="1"/>')
-              parts.append(f'<text x="{PADDING}" y="38" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="{TITLE_SIZE}" font-weight="700" fill="{TITLE_COLOR}">Most Used Languages</text>')
-
-              # Single horizontal progress bar (rounded caps) with segments
-              bar_left = PADDING
-              bar_width = WIDTH - 2 * PADDING
-              parts.append(f'<defs><clipPath id="barClip"><rect x="{bar_left}" y="{BAR_Y}" width="{bar_width}" height="{BAR_HEIGHT}" rx="{BAR_HEIGHT//2}" ry="{BAR_HEIGHT//2}"/></clipPath></defs>')
-              parts.append(f'<rect x="{bar_left}" y="{BAR_Y}" width="{bar_width}" height="{BAR_HEIGHT}" rx="{BAR_HEIGHT//2}" ry="{BAR_HEIGHT//2}" fill="#0a0a0a"/>')
-              parts.append('<g clip-path="url(#barClip)">')
-              x = bar_left
-              for lang_name, pct in languages:
-                  seg_width = max(2, (bar_width * pct) / 100.0)
-                  color = get_language_color(lang_name)
-                  parts.append(f'<rect x="{x:.2f}" y="{BAR_Y}" width="{seg_width:.2f}" height="{BAR_HEIGHT}" fill="{color}"/>')
-                  x += seg_width
-              parts.append('</g>')
-
-              # List: colored dot + "Language XX.XX%"
-              for i, (lang_name, pct) in enumerate(languages):
-                  color = get_language_color(lang_name)
-                  if i < col2_start:
-                      row, col = i, 0
+                  return """
+                  <svg xmlns='http://www.w3.org/2000/svg' width='640' height='60'>
+                      <rect width='100%' height='100%' fill='#ffffff' rx='8'/>
+                      <text x='20' y='35' font-family='system-ui, sans-serif' font-size='14' fill='#24292f'>
+                          No language data available
+                      </text>
+                  </svg>
+                  """
+              
+              # Chart dimensions
+              WIDTH = 1000
+              LEFT_MARGIN = 100
+              RIGHT_MARGIN = 36
+              TOP_MARGIN = 100
+              BOTTOM_MARGIN = 100
+              BAR_HEIGHT = 26
+              BAR_GAP = 12
+              
+              num_languages = len(languages)
+              HEIGHT = TOP_MARGIN + BOTTOM_MARGIN + (num_languages * BAR_HEIGHT) + ((num_languages - 1) * BAR_GAP)
+              
+              # Chart area calculations
+              chart_left = LEFT_MARGIN
+              chart_right = WIDTH - RIGHT_MARGIN
+              chart_top = TOP_MARGIN
+              chart_bottom = HEIGHT - BOTTOM_MARGIN
+              chart_width = chart_right - chart_left
+              
+              # Build SVG
+              svg_parts = []
+              
+              # SVG opening and styles
+              svg_parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">')
+              
+              # CSS styles with proper string formatting
+              styles = """
+              <style>
+                  :root {
+                      --bg: #ffffff;
+                      --fg: #1f2328;
+                      --muted: #66707a;
+                      --bar: #0b5fff;
+                      --grid: #e6e8eb;
+                  }
+                  @media (prefers-color-scheme: dark) {
+                      :root {
+                          --bg: #0d1117;
+                          --fg: #c9d1d9;
+                          --muted: #8b949e;
+                          --bar: #58a6ff;
+                          --grid: #30363d;
+                      }
+                  }
+                  text {
+                      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial, sans-serif;
+                      dominant-baseline: middle;
+                  }
+                  .title {
+                      font-weight: 600;
+                      font-size: 16px;
+                      fill: var(--fg);
+                      dominant-baseline: central;
+                  }
+                  .small {
+                      font-size: 12px;
+                      fill: var(--muted);
+                  }
+                  .label {
+                      font-size: 13px;
+                      fill: var(--fg);
+                  }
+                  .value {
+                      font-size: 12px;
+                      fill: var(--fg);
+                  }
+              </style>
+              """
+              svg_parts.append(styles)
+              
+              # Background
+              svg_parts.append(f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" rx="14" ry="14" fill="var(--bg)"/>')
+              
+              # Title
+              svg_parts.append(f'<text x="{LEFT_MARGIN}" y="{TOP_MARGIN - 24}" class="title">Programming Languages Distribution</text>')
+              
+              # Grid lines and tick labels
+              tick_values = [0, 20, 40, 60, 80, 100]
+              for tick in tick_values:
+                  x_pos = chart_left + (chart_width * tick / 100.0)
+                  svg_parts.append(f'<line x1="{x_pos:.1f}" y1="{chart_top}" x2="{x_pos:.1f}" y2="{chart_bottom}" stroke="var(--grid)" stroke-width="1" opacity="0.5"/>')
+                  svg_parts.append(f'<text x="{x_pos:.1f}" y="{chart_bottom + 18}" class="small" text-anchor="middle">{tick}%</text>')
+              
+              # Language bars
+              for i, (language_name, percentage) in enumerate(languages):
+                  y_pos = chart_top + (i * (BAR_HEIGHT + BAR_GAP))
+                  bar_width = chart_width * (percentage / 100.0)
+                  
+                  # Language label
+                  svg_parts.append(f'<text x="{LEFT_MARGIN - 12}" y="{y_pos + BAR_HEIGHT/2}" class="label" text-anchor="end">{escape_html(language_name)}</text>')
+                  
+                  # Bar
+                  svg_parts.append(f'<rect x="{chart_left}" y="{y_pos}" width="{bar_width:.1f}" height="{BAR_HEIGHT}" rx="6" ry="6" fill="var(--bar)"/>')
+                  
+                  # Percentage label
+                  if bar_width < 46:
+                      text_x = chart_left + bar_width + 6
+                      text_anchor = "start"
                   else:
-                      row, col = i - col2_start, 1
-                  y = LIST_START_Y + row * (LIST_ITEM_HEIGHT + ROW_GAP) + (LIST_ITEM_HEIGHT // 2)
-                  x_dot = PADDING + (col * (WIDTH // 2))
-                  x_text = x_dot + DOT_SIZE + 8
-                  parts.append(f'<circle cx="{x_dot + DOT_SIZE//2}" cy="{y}" r="{DOT_SIZE//2}" fill="{color}"/>')
-                  parts.append(f'<text x="{x_text}" y="{y}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="600" fill="{TEXT_COLOR}" dominant-baseline="middle">{escape_html(lang_name)} {pct:.2f}%</text>')
-
-              parts.append('</svg>')
-              return ''.join(parts)
+                      text_x = chart_left + bar_width - 6
+                      text_anchor = "end"
+                  
+                  svg_parts.append(f'<text x="{text_x:.1f}" y="{y_pos + BAR_HEIGHT/2}" class="value" text-anchor="{text_anchor}">{percentage:.1f}%</text>')
+              
+              # Footer
+              svg_parts.append(f'<text x="{WIDTH - RIGHT_MARGIN}" y="{HEIGHT - 20}" class="small" text-anchor="end">Generated from all accessible repositories</text>')
+              
+              svg_parts.append('</svg>')
+              return ''.join(svg_parts)
 
           def main():
               """Main execution function."""
