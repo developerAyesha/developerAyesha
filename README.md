@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=developerAyesha&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=60&descSize=20" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,50:6B4C9A,100:C850C0&height=220&section=header&text=developerAyesha&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=60&descSize=20" />
 </p>
 
 
@@ -71,8 +71,8 @@
 
 ### Impact & activity
 <p align="center">
-  <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
+  <img width="49%" height="195" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
+  <img width="49%" height="195" src="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
 </p>
 
 <p align="center">
@@ -110,7 +110,7 @@ I build reliable software and mentor engineers. If you have a challenging platfo
 
 ---
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=120&section=footer&animation=twinkling" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,50:6B4C9A,100:C850C0&height=120&section=footer&animation=twinkling" />
 
 <strong>Passion + Precision = Innovation</strong>
 </div>
