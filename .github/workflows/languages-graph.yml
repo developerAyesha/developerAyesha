@@ -161,12 +161,12 @@ jobs:
               return LANGUAGE_COLORS.get(lang, "#8B949E")
 
           def generate_svg(languages: List[Tuple[str, float]]) -> str:
-              """Generate 'Most Used Languages' card: dark theme, magenta title, colored bar, list with dots."""
-              CARD_BG = "#2F3642"
+              """Generate 'Most Used Languages' card: black bg, matches stats card width (495), dynamic percentages from API."""
+              CARD_BG = "#000000"
               CARD_BORDER = "#6B7280"
               TITLE_COLOR = "#F44391"
               TEXT_COLOR = "#FFFFFF"
-              WIDTH = 520
+              WIDTH = 495
               PADDING = 24
               TITLE_SIZE = 18
               BAR_HEIGHT = 14
@@ -200,7 +200,7 @@ jobs:
               bar_left = PADDING
               bar_width = WIDTH - 2 * PADDING
               parts.append(f'<defs><clipPath id="barClip"><rect x="{bar_left}" y="{BAR_Y}" width="{bar_width}" height="{BAR_HEIGHT}" rx="{BAR_HEIGHT//2}" ry="{BAR_HEIGHT//2}"/></clipPath></defs>')
-              parts.append(f'<rect x="{bar_left}" y="{BAR_Y}" width="{bar_width}" height="{BAR_HEIGHT}" rx="{BAR_HEIGHT//2}" ry="{BAR_HEIGHT//2}" fill="#1F242B"/>')
+              parts.append(f'<rect x="{bar_left}" y="{BAR_Y}" width="{bar_width}" height="{BAR_HEIGHT}" rx="{BAR_HEIGHT//2}" ry="{BAR_HEIGHT//2}" fill="#0a0a0a"/>')
               parts.append('<g clip-path="url(#barClip)">')
               x = bar_left
               for lang_name, pct in languages:

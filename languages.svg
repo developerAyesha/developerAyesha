@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="158" viewBox="0 0 520 158">
-  <rect width="100%" height="100%" rx="10" fill="#2F3642" stroke="#6B7280" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="158" viewBox="0 0 495 158">
+  <rect width="100%" height="100%" rx="10" fill="#000000" stroke="#6B7280" stroke-width="1"/>
   <text x="24" y="38" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="18" font-weight="700" fill="#F44391">Most Used Languages</text>
-  <defs><clipPath id="barClip"><rect x="24" y="52" width="472" height="14" rx="7" ry="7"/></clipPath></defs>
-  <rect x="24" y="52" width="472" height="14" rx="7" ry="7" fill="#1F242B"/>
+  <defs><clipPath id="barClip"><rect x="24" y="52" width="447" height="14" rx="7" ry="7"/></clipPath></defs>
+  <rect x="24" y="52" width="447" height="14" rx="7" ry="7" fill="#0a0a0a"/>
   <g clip-path="url(#barClip)">
-    <rect x="24" y="52" width="171.01" height="14" fill="#F7DF1E"/>
-    <rect x="195.01" y="52" width="159.25" height="14" fill="#E34F26"/>
-    <rect x="354.26" y="52" width="141.74" height="14" fill="#563D7C"/>
+    <rect x="24" y="52" width="162.11" height="14" fill="#F7DF1E"/>
+    <rect x="186.11" y="52" width="150.82" height="14" fill="#E34F26"/>
+    <rect x="336.93" y="52" width="134.07" height="14" fill="#563D7C"/>
   </g>
   <circle cx="32" cy="95" r="4" fill="#F7DF1E"/>
   <text x="44" y="95" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" dominant-baseline="middle">JavaScript 36.23%</text>
   <circle cx="32" cy="123" r="4" fill="#E34F26"/>
   <text x="44" y="123" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" dominant-baseline="middle">HTML 33.74%</text>
-  <circle cx="284" cy="95" r="4" fill="#563D7C"/>
-  <text x="296" y="95" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" dominant-baseline="middle">CSS 30.03%</text>
+  <circle cx="271" cy="95" r="4" fill="#563D7C"/>
+  <text x="283" y="95" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" dominant-baseline="middle">CSS 30.03%</text>
 </svg>
