@@ -15,33 +15,84 @@
 
 ---
 
-<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png" alt="Technologist" width="28" /> About Me
 
-### 👋 About Me
+<table>
+<tr>
+<td width="55%" valign="top">
 
-**Software Engineer & Team Lead** @ **Developer Tag**
+### Hi, I'm Ayesha! 👋
 
-I architect and deliver production systems that scale. Currently focused on:
+**Software Engineer & Team Lead** at **Developer Tag**
 
-- 🚀 **Full-Stack Development** — Next.js, React, Node.js, PostgreSQL
-- 🤖 **AI Integration** — LangChain, RAG pipelines, AI agents
-- ☁️ **Cloud & DevOps** — AWS, Docker, CI/CD, microservices
-- 👥 **Leadership** — Code reviews, architecture decisions, mentoring
+I'm passionate about building production systems that scale and solving complex problems with elegant solutions.
 
-<br/>
+<img src="https://img.shields.io/badge/Experience-1%2B%20Years-667eea?style=flat-square&labelColor=1a1a2e"/> <img src="https://img.shields.io/badge/Focus-Full%20Stack%20%2B%20AI-764ba2?style=flat-square&labelColor=1a1a2e"/> <img src="https://img.shields.io/badge/Role-Team%20Lead-f093fb?style=flat-square&labelColor=1a1a2e"/>
 
-### ⚡ Quick Facts
+</td>
+<td width="45%" align="center">
 
-```javascript
-const ayesha = {
-  experience: "1+ years shipping production code",
-  stack: ["MERN", "Next.js", "AWS", "AI/RAG"],
-  current: "Building scalable SaaS platforms",
-  learning: "Advanced LLM orchestration"
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="320"/>
+
+</td>
+</tr>
+</table>
+
+### 🎯 What I Do
+
+<table>
+<tr>
+<td width="50%">
+
+<h4>🚀 Full-Stack Development</h4>
+
+Building end-to-end applications with modern frameworks
+
+`Next.js` `React` `Node.js` `PostgreSQL` `MongoDB`
+
+</td>
+<td width="50%">
+
+<h4>🤖 AI & Machine Learning</h4>
+
+Integrating intelligent systems into production apps
+
+`LangChain` `LangGraph` `RAG` `OpenAI` `Vector DBs`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+<h4>☁️ Cloud & DevOps</h4>
+
+Deploying and scaling infrastructure on the cloud
+
+`AWS` `Docker` `CI/CD` `Microservices` `Kubernetes`
+
+</td>
+<td width="50%">
+
+<h4>👥 Team Leadership</h4>
+
+Guiding teams to deliver high-quality software
+
+`Code Reviews` `Architecture` `Mentoring` `Agile`
+
+</td>
+</tr>
+</table>
+
+### 💡 Current Focus
+
+```typescript
+const currentWork = {
+  building: "Scalable SaaS platforms with AI integration",
+  exploring: "Advanced LLM orchestration with LangGraph",
+  improving: "System design & distributed architectures",
+  sharing: "Knowledge through mentoring & code reviews"
 };
 ```
-
-<br clear="right"/>
 
 ---
 
@@ -52,7 +103,7 @@ const ayesha = {
 </p>
 
 <details>
-<summary><b>View Full Stack</b></summary>
+<summary><b>📋 View Full Stack Details</b></summary>
 <br/>
 
 | Category | Technologies |
