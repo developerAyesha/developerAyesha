@@ -15,111 +15,43 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png" alt="Technologist" width="28" /> About Me
+<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
 
-<table>
-<tr>
-<td width="55%" valign="top">
+### About Me
 
-### Hi, I'm Ayesha! 👋
+I'm **Ayesha**, a **Software Engineer & Team Lead** at **Developer Tag**.
 
-**Software Engineer & Team Lead** at **Developer Tag**
+I architect and deliver production systems that scale — from full-stack web applications to AI-powered solutions. With 1+ years of hands-on experience, I focus on writing clean, maintainable code and leading teams to ship quality products.
 
-I'm passionate about building production systems that scale and solving complex problems with elegant solutions.
+**What I'm working on:**
 
-<img src="https://img.shields.io/badge/Experience-1%2B%20Years-667eea?style=flat-square&labelColor=1a1a2e"/> <img src="https://img.shields.io/badge/Focus-Full%20Stack%20%2B%20AI-764ba2?style=flat-square&labelColor=1a1a2e"/> <img src="https://img.shields.io/badge/Role-Team%20Lead-f093fb?style=flat-square&labelColor=1a1a2e"/>
+🚀 &nbsp; Building scalable SaaS platforms with Next.js & Node.js
 
-</td>
-<td width="45%" align="center">
+🤖 &nbsp; Integrating AI/RAG systems using LangChain & LangGraph
 
-<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="320"/>
+☁️ &nbsp; Deploying microservices on AWS with Docker
 
-</td>
-</tr>
-</table>
+👥 &nbsp; Leading code reviews and mentoring developers
 
-### 🎯 What I Do
+<br/>
 
-<table>
-<tr>
-<td width="50%">
+**Currently exploring:** Advanced LLM orchestration and system design patterns
 
-<h4>🚀 Full-Stack Development</h4>
-
-Building end-to-end applications with modern frameworks
-
-`Next.js` `React` `Node.js` `PostgreSQL` `MongoDB`
-
-</td>
-<td width="50%">
-
-<h4>🤖 AI & Machine Learning</h4>
-
-Integrating intelligent systems into production apps
-
-`LangChain` `LangGraph` `RAG` `OpenAI` `Vector DBs`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-<h4>☁️ Cloud & DevOps</h4>
-
-Deploying and scaling infrastructure on the cloud
-
-`AWS` `Docker` `CI/CD` `Microservices` `Kubernetes`
-
-</td>
-<td width="50%">
-
-<h4>👥 Team Leadership</h4>
-
-Guiding teams to deliver high-quality software
-
-`Code Reviews` `Architecture` `Mentoring` `Agile`
-
-</td>
-</tr>
-</table>
-
-### 💡 Current Focus
-
-```typescript
-const currentWork = {
-  building: "Scalable SaaS platforms with AI integration",
-  exploring: "Advanced LLM orchestration with LangGraph",
-  improving: "System design & distributed architectures",
-  sharing: "Knowledge through mentoring & code reviews"
-};
-```
+<br clear="right"/>
 
 ---
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,nodejs,express,python,mongodb,postgresql,aws,docker,git&perline=6" />
 </p>
 
-<details>
-<summary><b>📋 View Full Stack Details</b></summary>
-<br/>
-
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | React, Next.js, TypeScript, TailwindCSS, Redux |
-| **Backend** | Node.js, Express, Python, FastAPI, GraphQL |
-| **Database** | PostgreSQL, MongoDB, Redis, Prisma |
-| **AI/ML** | LangChain, LangGraph, OpenAI, RAG, Vector DBs |
-| **Cloud** | AWS (EC2, S3, Lambda), Docker, GitHub Actions |
-| **Tools** | Git, VS Code, Postman, Figma |
-
-</details>
+**Frontend:** React, Next.js, TypeScript, TailwindCSS &nbsp;•&nbsp; **Backend:** Node.js, Express, Python, GraphQL &nbsp;•&nbsp; **Database:** PostgreSQL, MongoDB, Redis &nbsp;•&nbsp; **AI/ML:** LangChain, LangGraph, OpenAI, RAG &nbsp;•&nbsp; **Cloud:** AWS, Docker, GitHub Actions
 
 ---
 
-### 📊 Languages
+### Languages
 
 <p align="center">
   <img src="./languages.svg" width="100%" alt="Programming Languages" />
@@ -127,7 +59,7 @@ const currentWork = {
 
 ---
 
-### 📈 GitHub Stats
+### GitHub Stats
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667eea&icon_color=667eea&text_color=FFFFFF&border_radius=10" />
@@ -140,11 +72,10 @@ const currentWork = {
 
 ---
 
-### 🤝 Let's Connect
+### Let's Connect
 
 <p align="center">
-I build reliable software and mentor engineers.<br/>
-If you have a challenging platform problem or want to discuss AI + product, let's talk.
+I build reliable software and mentor engineers. If you have a challenging platform problem or want to discuss AI + product, let's talk.
 </p>
 
 <p align="center">
