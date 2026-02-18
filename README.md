@@ -1,116 +1,158 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,50:6B4C9A,100:C850C0&height=220&section=header&text=developerAyesha&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=60&descSize=20" />
-</p>
-
-
-
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=venom&color=0:0f0f23,50:1a1a3e,100:2d1b4e&height=300&section=header&text=developerAyesha&fontSize=70&fontColor=e4e4f0&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20•%20Full%20Stack%20Developer%20•%20AI%20Specialist&descAlignY=55&descSize=18&stroke=6366f1&strokeWidth=2" />
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=venom&color=0:f8fafc,50:e0e7ff,100:c7d2fe&height=300&section=header&text=developerAyesha&fontSize=70&fontColor=1e1b4b&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20•%20Full%20Stack%20Developer%20•%20AI%20Specialist&descAlignY=55&descSize=18&stroke=6366f1&strokeWidth=2" />
+  <img width="100%" alt="Header" src="https://capsule-render.vercel.app/api?type=venom&color=0:0f0f23,50:1a1a3e,100:2d1b4e&height=300&section=header&text=developerAyesha&fontSize=70&fontColor=e4e4f0&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20•%20Full%20Stack%20Developer%20•%20AI%20Specialist&descAlignY=55&descSize=18" />
+</picture>
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=4158D0&center=true&vCenter=true&width=700&lines=Building+Scalable+Full+Stack+Apps;AI+Integration+Specialist;Passionate+Developer+%26+Problem+Solver;Innovation+Through+Code)](https://git.io/typing-svg)
+<br/>
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   ⚡ Building Scalable Systems  •  🤖 AI Integration  •  🚀 DevOps  │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-0f0f23?style=for-the-badge&logo=vercel&logoColor=white)](https://developerAyesha-psi.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0f0f23?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://linkedin.com/in/developerAyesha)
+[![LeetCode](https://img.shields.io/badge/LeetCode-0f0f23?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/developerAyesha)
+[![Email](https://img.shields.io/badge/Email-0f0f23?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:developerAyesha@gmail.com)
 
 </div>
 
+<br/>
 
-</div>
+<img align="right" alt="Coding" width="380" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
 
-<h3 align="center"> Software Engineer · Team Lead @ <strong>Developer Tag</strong></h3>
+## `$ whoami`
+
+**Software Engineer & Team Lead** at **Developer Tag**
+
+I architect and ship production systems that scale. My focus areas:
+
+- **Full-Stack Development** — Next.js, React, Node.js, PostgreSQL
+- **AI/ML Integration** — LangChain, RAG pipelines, AI agents
+- **Cloud & DevOps** — AWS, Docker, CI/CD, microservices
+- **Team Leadership** — Code reviews, architecture decisions, mentoring
+
+<br/>
+
+### `// quick_stats`
+
+```typescript
+const ayesha = {
+  experience: "1+ years shipping production code",
+  focus: ["MERN/Next.js", "AWS Infrastructure", "AI/RAG Systems"],
+  current: "Building scalable SaaS platforms",
+  learning: "Advanced LLM orchestration with LangGraph"
+};
+```
+
+<br clear="right"/>
+
+---
+
+## `<Stack />`
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### Data & AI
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+
+### Infrastructure
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=FF9900)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+
+</td>
+</tr>
+</table>
+
+---
+
+## `📊 Languages`
 
 <p align="center">
-  <a href="https://developerAyesha-psi.vercel.app">Portfolio</a> ·
-  <a href="https://linkedin.com/in/developerAyesha">LinkedIn</a> ·
-  <a href="https://leetcode.com/developerAyesha">LeetCode</a> ·
-  <a href="mailto:developerAyesha@gmail.com">Email</a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./languages.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./languages.svg" />
+    <img width="100%" src="./languages.svg" alt="Programming Languages Distribution" />
+  </picture>
 </p>
 
 ---
-<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
 
-### At a glance
-
-* **1+ years** shipping scalable products (SaaS, dashboards, microservices)
-* Lead teams building **MERN/Next.js** platforms on **AWS** with solid DevOps
-* Production **AI/RAG** with LangChain/LangGraph
-
----
-
-### What I do
-
-* Architect & deliver **full‑stack systems** (Next.js/React · Node.js/Express · PostgreSQL/MongoDB)
-* Design **event‑driven microservices** with Docker, queues, and observability
-* Build **AI assistants** (retrieval augmented generation, tools/agents) for real use‑cases
-* Lead teams: code reviews, roadmaps, hiring, mentoring
----
-
-
-### Tech
+## `📈 Activity`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,nodejs,express,python,langchain,mongodb,postgresql,aws,docker,git,graphql" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&hide_border=true&bg_color=0f0f23&title_color=818cf8&icon_color=818cf8&text_color=e4e4f0&border_radius=12" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&hide_border=true&bg_color=f8fafc&title_color=6366f1&icon_color=6366f1&text_color=1e1b4b&border_radius=12" />
+    <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&hide_border=true&bg_color=0f0f23&title_color=818cf8&icon_color=818cf8&text_color=e4e4f0&border_radius=12" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&hide_border=true&background=0f0f23&stroke=1a1a3e&ring=818cf8&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=e4e4f0&currStreakNum=e4e4f0&sideNums=e4e4f0&dates=6b7280&border_radius=12" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&hide_border=true&background=f8fafc&stroke=e0e7ff&ring=6366f1&fire=8b5cf6&currStreakLabel=8b5cf6&sideLabels=1e1b4b&currStreakNum=1e1b4b&sideNums=1e1b4b&dates=6b7280&border_radius=12" />
+    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&hide_border=true&background=0f0f23&stroke=1a1a3e&ring=818cf8&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=e4e4f0&currStreakNum=e4e4f0&sideNums=e4e4f0&dates=6b7280&border_radius=12" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=developerAyesha&bg_color=0f0f23&color=818cf8&line=818cf8&point=a78bfa&area=true&area_color=818cf8&hide_border=true&radius=12" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=developerAyesha&bg_color=f8fafc&color=6366f1&line=6366f1&point=8b5cf6&area=true&area_color=c7d2fe&hide_border=true&radius=12" />
+    <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=developerAyesha&bg_color=0f0f23&color=818cf8&line=818cf8&point=a78bfa&area=true&area_color=818cf8&hide_border=true&radius=12" />
+  </picture>
 </p>
 
 ---
 
-<!-- ### Selected work -->
-<!-- 
-> Private client repositories are intentionally not linked. Public case‑study write‑ups will live on the portfolio. For repo access, please reach out privately.
+## `💬 Let's Connect`
 
 <div align="center">
 
-| Project                        | What it does                                           | Stack                                         | Access                           |
-| ------------------------------ | ------------------------------------------------------ | --------------------------------------------- | -------------------------------- |
-| **LangGraph RAG Starter**      | Production‑grade RAG with evaluations & feedback loops | Python, LangChain/LangGraph, OpenAI, PgVector | 🔒 Internal (request case study) |
-| **Next.js SaaS Boilerplate**   | Auth, billing, dashboards, CRUD, testing               | Next.js 14, tRPC, Prisma, PostgreSQL, Stripe  | 🔒 Internal (request case study) |
-| **Event‑Driven Microservices** | Services with Kafka/NATS, SAGA/Outbox patterns         | Node.js, Docker, PostgreSQL, Kafka            | 🔒 Internal (request case study) |
-| **AI Support Bot**             | Multilingual support agent with tools & memory         | Python, FastAPI, LangChain, Redis             | 🔒 Internal (request case study) |
+I build reliable software and mentor engineers. If you have a challenging platform problem or want to discuss AI + product, I'd love to chat.
 
-</div> -->
+<br/>
 
----
+```
+                    ╔═══════════════════════════════════════╗
+                    ║   Open to collaborations & projects   ║
+                    ╚═══════════════════════════════════════╝
+```
 
-### Impact & activity
-<p align="center">
-  <img width="49%" height="195" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=developerAyesha&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
-  <img width="49%" height="195" src="https://github-readme-streak-stats.herokuapp.com/?user=developerAyesha&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
-</p>
-
-<p align="center">
-  <img width="95%" src="./languages.svg" alt="Languages (public + private repos)" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=developerAyesha&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true&theme=tokyo-night" />
-</p>
-
-
----
-
-<!-- ### Leadership & practices
-
-* Write architecture decisions (ADRs) and run blameless post‑mortems
-* Prefer automated quality gates: CI, coverage, lint, type‑safety
-* Design for operability: logs, traces, dashboards, SLOs
-* Communicate with RFCs and small, frequent releases -->
-
----
-<!-- 
-### Achievements
-
-* **ICPC Asia Online Preliminary 2023 – Top 10**
-* **LeetCode Top 5%** problem solver
-* Delivered **50+ projects** for global clients
-* Awarded **Student of the Year** (Akhuwat College) -->
-
----
-
-### Get in touch
-
-I build reliable software and mentor engineers. If you have a challenging platform problem or want to talk AI + product, reach out.
-
----
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,50:6B4C9A,100:C850C0&height=120&section=footer&animation=twinkling" />
-
-<strong>Passion + Precision = Innovation</strong>
 </div>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=rect&color=0:0f0f23,50:1a1a3e,100:2d1b4e&height=120&section=footer&text=Precision%20%2B%20Passion%20%3D%20Innovation&fontSize=24&fontColor=e4e4f0&animation=twinkling&fontAlignY=50" />
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=rect&color=0:f8fafc,50:e0e7ff,100:c7d2fe&height=120&section=footer&text=Precision%20%2B%20Passion%20%3D%20Innovation&fontSize=24&fontColor=1e1b4b&animation=twinkling&fontAlignY=50" />
+  <img width="100%" alt="Footer" src="https://capsule-render.vercel.app/api?type=rect&color=0:0f0f23,50:1a1a3e,100:2d1b4e&height=120&section=footer&text=Precision%20%2B%20Passion%20%3D%20Innovation&fontSize=24&fontColor=e4e4f0&animation=twinkling&fontAlignY=50" />
+</picture>
